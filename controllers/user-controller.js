@@ -19,7 +19,7 @@ const userController = {
 
     // get a specific user
     getUserById({ params }, res) {
-        User.findOne({ _id: params._id })
+        User.findOne({ _id: params.id })
         .populate({
             path: 'thoughts',
             select: '-__v'
@@ -47,7 +47,7 @@ const userController = {
 
     // update a user by id
     updateUser({ params, body }, res) {
-        User.findOneAndUpdate({ _id: params._id }, body, { new: true, runValidators: true })
+        User.findOneAndUpdate({ _id: params.id }, body, { new: true, runValidators: true })
         .then(dbUserData => {
             if (!dbUserData) {
                 res.status(404).json({ message: 'No user found with this id!' });
