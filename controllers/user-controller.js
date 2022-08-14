@@ -62,7 +62,7 @@ const userController = {
         .catch(err => res.status(400).json(err));
     },
 
-    deleteUser({ params, body }, res) {
+    deleteUser({ params }, res) {
         User.findOneAndDelete({ _id: params.id })
         .then((body) => {
             return  Thought.deleteMany({ username: {$in: body.username } });
