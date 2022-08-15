@@ -1,4 +1,5 @@
 const { User, Thought } = require('../models');
+const { param } = require('../routes/api/user-routes');
 
 const userController = {
     // user functions will go here
@@ -97,18 +98,12 @@ const userController = {
     },
 
     deleteFriend({ params }, res) {
-        User.findOneAndDelete(
+        User.findOneAndUpdate(
             { _id: params.userId },
             { $pull: { friends: params.friendId } },
             { new: true }
         )
-        .then(dbUserData => {
-            if (!dbUserData) {
-                res.status(404).json({ message: 'No user found with this id!' });
-                return;
-            }
-            res.json(dbUserData);
-        })
+        .then(dbUserData => res.json(dbUserData))
         .catch(err => res.status(400).res.json(err));
     }
 

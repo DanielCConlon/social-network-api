@@ -1,6 +1,8 @@
 # social-network-api
 
-github url: https://github.com/DanielCConlon/social-network-api
+- github url: https://github.com/DanielCConlon/social-network-api
+- demo part 1: https://watch.screencastify.com/v/dbW0uXcrLizWSW14fuil
+- demo part 2: https://watch.screencastify.com/v/hJ62JgXYuXPUm4hpT6dL
 
 ## Table-of-Contents
 
@@ -9,12 +11,13 @@ github url: https://github.com/DanielCConlon/social-network-api
 - [Installation](#installation)
 - [Usage](#usage)
 - [Requirements](#requirements)
+- [Application](#application)
 
 ## [User Story](#table-of-contents)
 
-AS A social media startup
-I WANT an API for my social network that uses a NoSQL database
-SO THAT my website can handle large amounts of unstructured data
+- AS A social media startup
+- I WANT an API for my social network that uses a NoSQL database
+- SO THAT my website can handle large amounts of unstructured data
 
 ## [Description](#description)
 
@@ -22,7 +25,7 @@ Build an API for a social network web application where users can share their th
 
 ## [Installation](#table-of-contents)
 
-Youa re going to need to run npm init. Then you will need to run npm install express mongoose. This will get you all the packages you need in order to run this API.
+You are going to need to run npm init. Then you will need to run npm install express mongoose. This will get you all the packages you need in order to run this API.
 
 ## [Usage](#table-of-contents)
 
@@ -35,12 +38,16 @@ Youa re going to need to run npm init. Then you will need to run npm install exp
 
 ## [Requirements](#table-of-contents)
 
-GIVEN a social network API
-WHEN I enter the command to invoke the application
-THEN my server is started and the Mongoose models are synced to the MongoDB database
-WHEN I open API GET routes in Insomnia for users and thoughts
-THEN the data for each of these routes is displayed in a formatted JSON
-WHEN I test API POST, PUT, and DELETE routes in Insomnia
-THEN I am able to successfully create, update, and delete users and thoughts in my database
-WHEN I test API POST and DELETE routes in Insomnia
-THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
+- GIVEN a social network API
+- WHEN I enter the command to invoke the application
+- THEN my server is started and the Mongoose models are synced to the MongoDB database
+- WHEN I open API GET routes in Insomnia for users and thoughts
+- THEN the data for each of these routes is displayed in a formatted JSON
+- WHEN I test API POST, PUT, and DELETE routes in Insomnia
+- THEN I am able to successfully create, update, and delete users and thoughts in my database
+- WHEN I test API POST and DELETE routes in Insomnia
+- THEN I am able to successfully create and delete reactions to thoughts and add and remove friends to a user’s friend list
+
+## [Application](#table-of-contents)
+
+![Website image](./utils/screenshot.PNG)
